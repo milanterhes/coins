@@ -22,7 +22,9 @@ const CodeSection: FC<Pick<Currency, "code">> = ({ code }) => {
   );
 
   return (
-    <CodeSectionComponent bg={colors[colorIdx]}>{code}</CodeSectionComponent>
+    <CodeSectionComponent bg={colors[colorIdx]} data-testid="code-section">
+      {code}
+    </CodeSectionComponent>
   );
 };
 

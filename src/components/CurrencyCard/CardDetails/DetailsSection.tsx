@@ -52,18 +52,18 @@ const DetailsSection: FC<{ currency: Currency }> = ({
   currency: { name, isSupportedInUS, supportsTestMode },
 }) => {
   return (
-    <DetailsSectionComponent>
-      <DetailTitle>{name}</DetailTitle>
+    <DetailsSectionComponent data-testid="details-section">
+      <DetailTitle data-testid="details-title">{name}</DetailTitle>
       <DetailList>
         <DetailText>
           US support:{" "}
-          <StatusText positive={isSupportedInUS}>
+          <StatusText data-testid="us-text" positive={isSupportedInUS}>
             {isSupportedInUS ? "Yes" : "No"}
           </StatusText>
         </DetailText>
         <DetailText>
           Test mode available:{" "}
-          <StatusText positive={supportsTestMode}>
+          <StatusText data-testid="test-mode-text" positive={supportsTestMode}>
             {supportsTestMode ? "Yes" : "No"}
           </StatusText>
         </DetailText>

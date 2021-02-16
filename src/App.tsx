@@ -5,13 +5,7 @@ import CurrencyList from "./components/CurrencyList";
 import Controls from "./components/Controls/Controls";
 import { Currency, SortFields } from "./types";
 import styled from "styled-components";
-
-function shuffleArray(array: Array<any>) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-}
+import { shuffleArray } from "./utils/shuffleArray";
 
 const AppWrapper = styled.div(
   ({ theme: { breakpoints } }) => `
